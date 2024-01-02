@@ -139,7 +139,7 @@ public class Main {
         int anterior = 1;
         for (int n = 1; n <= 10; n++) {
             int temp = fibonacci;
-            fibonacci = fibonacci + anterior;
+            fibonacci += anterior;
             anterior = temp;
             System.out.println(fibonacci);
         }*/
@@ -166,6 +166,143 @@ public class Main {
         }
         System.out.println("Factorial de " + factorial + ": " + resultado);*/
 
-        
+        // Arreglos
+        /* Definición 1
+        String nombres[];
+        nombres = new String[3];
+        nombres[0] = "Danny"; nombres[1] = "Carla"; nombres[2] = "Valentino";
+        */
+
+        /* Definición 2
+        String nombres[] = new String[3];
+        nombres[0] = "Danny"; nombres[1] = "Carla"; nombres[2] = "Valentino";
+        */
+
+        /* Definición 3
+        String nombres[] = {"Danny", "Carla", "Valentino"};
+        */
+
+        /* Output
+        System.out.println(nombres[0]);
+        System.out.println(nombres[1]);
+        System.out.println(nombres[2]);
+        */
+
+        /*
+        int calificaciones[] = {9, 8, 7, 10, 10, 9, 8, 8, 10, 9};
+        int suma = 0;
+
+        for (int indice = 0; indice < calificaciones.length; indice++) {
+            suma += calificaciones[indice];
+        }
+        float promedio = suma / calificaciones.length;
+        System.out.println("El promedio es: " + promedio);
+        */
+
+        /* String como cadena Java
+        String mensaje = "Este mensaje posee muchas letras a";
+        int indicePrimeraA = mensaje.indexOf("a");
+        int indiceSegundaA = mensaje.indexOf("a", indicePrimeraA + 1 );
+        System.out.println(indicePrimeraA);
+        System.out.println(indiceSegundaA);
+        */
+
+        /*String mensaje = "Hola Mundo";
+        int indiceLetraM = mensaje.indexOf("M");
+        String subString = mensaje.substring(indiceLetraM);
+        System.out.println(subString);*/
+
+        /*String mensaje = "Hola Mundo";
+        int indiceLetraM = mensaje.indexOf("M");
+        String subString = mensaje.substring(indiceLetraM, indiceLetraM + 2);
+        System.out.println(subString);*/
+
+        // For each
+        /*
+        int calificaciones[] = {9, 8, 7, 10, 10, 9, 8, 8, 10, 9};
+        int suma = 0;
+
+        for (int calificacion : calificaciones) {
+            suma += calificacion;
+        }
+        float promedio = suma / calificaciones.length;
+        System.out.println("El promedio es: " + promedio);
+        */
+
+        /*
+        int valores[] = new int[10];
+
+        for (int indice = 0; indice < valores.length; indice++) {
+            valores[indice] = indice;
+        }
+
+        for (int valor: valores) {
+            System.out.println(valor);
+        }
+        */
+
+        // Matrices
+        /*
+        int matriz[][] = new int[4][3];
+
+        matriz[0][0] = 1;
+        matriz[0][1] = 2;
+        matriz[0][2] = 3;
+
+        matriz[1][0] = 1;
+        matriz[1][1] = 2;
+        matriz[1][2] = 3;
+
+        matriz[2][0] = 1;
+        matriz[2][1] = 2;
+        matriz[2][2] = 3;
+
+        for (int posX = 0; posX < matriz.length; posX++) {
+            for (int posY = 0; posY < matriz[posX].length; posY++) {
+                matriz[posX][posY] = posY + 1;
+            }
+        }
+
+        for (int[] fila : matriz) {
+            for (int celda : fila) {
+                System.out.println(celda);
+            }
+        }
+        */
+
+        // Arreglos dinámicos
+        int calificaciones[][] = new int[5][];
+
+        calificaciones[0] = new int[1]; // E
+        calificaciones[1] = new int[2]; // A
+        calificaciones[2] = new int[3]; // D
+        calificaciones[3] = new int[4]; // B
+        calificaciones[4] = new int[5]; // C
+
+        calificaciones[0][0] = 8;
+
+        calificaciones[1][0] = 9;
+        calificaciones[1][1] = 10;
+
+        calificaciones[2][0] = 8;
+        calificaciones[2][1] = 9;
+        calificaciones[2][2] = 10;
+
+        calificaciones[3][0] = 8;
+        calificaciones[3][1] = 9;
+        calificaciones[3][2] = 10;
+
+        calificaciones[4][0] = 8;
+        calificaciones[4][1] = 9;
+        calificaciones[4][2] = 10;
+        calificaciones[4][3] = 10;
+
+        for (int []calificacionesPorAlumno : calificaciones) {
+            for (int calificacion : calificacionesPorAlumno) {
+                System.out.print(calificacion + " ");
+            }
+            System.out.println("");
+        }
+
     }
 }
