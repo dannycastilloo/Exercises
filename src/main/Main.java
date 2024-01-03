@@ -1,6 +1,8 @@
 package main;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -170,12 +172,16 @@ public class Main {
         /* Definición 1
         String nombres[];
         nombres = new String[3];
-        nombres[0] = "Danny"; nombres[1] = "Carla"; nombres[2] = "Valentino";
+        nombres[0] = "Danny";
+        nombres[1] = "Carla";
+        nombres[2] = "Valentino";
         */
 
         /* Definición 2
         String nombres[] = new String[3];
-        nombres[0] = "Danny"; nombres[1] = "Carla"; nombres[2] = "Valentino";
+        nombres[0] = "Danny";
+        nombres[1] = "Carla";
+        nombres[2] = "Valentino";
         */
 
         /* Definición 3
@@ -271,7 +277,7 @@ public class Main {
         */
 
         // Arreglos dinámicos
-        int calificaciones[][] = new int[5][];
+        /*int calificaciones[][] = new int[5][];
 
         calificaciones[0] = new int[1]; // E
         calificaciones[1] = new int[2]; // A
@@ -302,7 +308,256 @@ public class Main {
                 System.out.print(calificacion + " ");
             }
             System.out.println("");
+        }*/
+
+        /*
+        Para obtener un número aleatorio en Java podemos hacer uso de la siguiente sentencia.
+        int numero = (int)(Math.random() * 100);
+        */
+
+        // Ejercicios Arreglos
+
+        // Crear un arreglo cual nos permita almacenar cien números enteros.
+
+        /*int valores[] = new int[100];*/
+
+        // Llenar el arreglo con números aleatorios.
+
+        /*for ( int i = 0; i < valores.length; i++ ) {
+            valores[i] = (int)(Math.random() * 101);
+        }*/
+
+        // Mostrar en consola el número mayor.
+
+        /*System.out.println(Arrays.stream(valores).max().orElse(0));+/
+
+        // Mostrar en consola el número menor.
+
+        /*System.out.println(Arrays.stream(valores).min().orElse(0));*/
+
+        // Mostrar en consola todos los números primos.
+
+        /*for (int valor : valores) {
+            boolean esPrimo = valor > 1;
+            for (int i = 2; i <= Math.sqrt(valor) && esPrimo; i++) {
+                esPrimo = valor % i != 0;
+            }
+            if (esPrimo)
+                System.out.println(valor);
+        }*/
+
+        // Mostrar en consola todos los números pares.
+
+        /*for (int valor : valores) {
+            if (valor % 2 == 0) {
+                System.out.println(valor);
+            }
+        }*/
+
+        // Mostrar en consola el arreglo de forma ascendente.
+
+        /* Usando funciones de Java - Collectors
+        System.out.print(Arrays.stream(valores).sorted().mapToObj(Integer::toString).collect(Collectors.joining(", ")));*/
+
+        /* Algoritmo de ordenación por inserción
+        for (int i = 1; i < valores.length; i++) {
+            int clave = valores[i];
+            int j = i - 1;
+
+            while (j >= 0 && valores[j] > clave) {
+                valores[j + 1] = valores[j];
+                j = j - 1;
+            }
+
+            valores[j + 1] = clave;
         }
+
+        for (int valor : valores) {
+            System.out.print(valor + " ");
+        }*/
+
+        // Mostrar en consola el promedio del arreglo.
+
+        /*System.out.println(Arrays.stream(valores).average().orElse(0));*/
+
+        // Mostrar en consola la suma del primer y último elemento del arreglo.
+
+        /*int max = Arrays.stream(valores).max().orElse(0);
+        int min = Arrays.stream(valores).min().orElse(0);
+        int suma = max + min;
+        System.out.println("La suma de " + max + " y " + min + " es: " + suma);*/
+
+        // Mostrar en consola el mensaje "Existe cien" en dado caso el arreglo almacene por los menos un cien.
+
+        /*for (int valor : valores) {
+            if (valor == 100)
+                System.out.println("Existe cien");
+        }*/
+
+        // Ejercicios Matriz
+
+        // Crear un matriz de 5 x 5
+
+        int matriz[][] = new int[5][5];
+
+        // Llenar la matriz con números aleatorios.
+
+        for (int posX = 0; posX < matriz.length; posX++) {
+            for (int posY = 0; posY < matriz[posX].length; posY++) {
+                matriz[posX][posY] = (int) (Math.random() * 100) + 1;
+            }
+        }
+
+        // Mostrar en consola el promedio de la matriz.
+
+        /*int suma = 0;
+
+        for (int[] fila : matriz) {
+            for (int elemento : fila) {
+                suma += elemento;
+            }
+        }
+
+        double promedio = (double) suma / matriz.length;
+
+        System.out.println("El promedio de los elementos es: " + promedio);*/
+
+        // Mostrar en consola el número mayor y la cantidad de veces que este se repite.
+
+        /*int mayor = Integer.MIN_VALUE;
+        int frecuenciaMayor = 0;
+
+        for (int[] fila : matriz) {
+            for (int elemento : fila) {
+                if (elemento > mayor) {
+                    mayor = elemento;
+                    frecuenciaMayor = 1;
+                } else if (elemento == mayor) {
+                    frecuenciaMayor++;
+                }
+            }
+        }
+
+        System.out.println("El número mayor es: " + mayor);
+        System.out.println("La cantidad de veces que se repite es: " + frecuenciaMayor);*/
+
+        // Mostrar en consola todos los números primos.
+
+        /*for (int fila[] : matriz) {
+            for (int elemento : fila) {
+                boolean esPrimo = elemento > 1;
+                for (int i = 2; i <= Math.sqrt(elemento) && esPrimo; i++) {
+                    esPrimo = elemento % i != 0;
+                }
+                if (esPrimo)
+                    System.out.println(elemento);
+            }
+        }*/
+
+        // Mostrar en consola todos los números pares.
+
+        /*for (int fila[] : matriz) {
+            for (int elemento : fila) {
+                if(elemento % 2 == 0) {
+                    System.out.println(elemento);
+                }
+            }
+        }*/
+
+        // Mostrar en consola la suma de las diagonales
+
+        /*int sumaDiagonalPrincipal = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaDiagonalPrincipal += matriz[i][i];
+        }
+
+        int sumaDiagonalSecundaria = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaDiagonalSecundaria += matriz[i][matriz.length - 1 - i];
+        }
+
+        int sumDiagonales = sumaDiagonalPrincipal + sumaDiagonalSecundaria;
+
+        System.out.println("La suma de las diagonales es: " + sumDiagonales);*/
+
+        // Mostrar en consola la suma de la última fila.
+
+        /*int ultimaFila = matriz.length - 1;
+
+        int sumaUltimaFila = 0;
+        for (int elemento : matriz[ultimaFila]) {
+            sumaUltimaFila += elemento;
+        }
+
+        System.out.println("La suma de la última fila es: " + sumaUltimaFila);*/
+
+        // Mostrar en consola el mensaje "Cuadrado Mágico" si la matriz cataloga como un cuadrado mágico.
+
+        /*boolean esCuadradoMagico = true;
+
+        int sumaFila = 0;
+        for (int elemento : matriz[0]) {
+            sumaFila += elemento;
+        }
+
+        boolean isFila = true;
+        for (int i = 1; i < matriz.length; i++) {
+            int sumaActual = 0;
+            for (int elemento : matriz[i]) {
+                sumaActual += elemento;
+            }
+            if (sumaActual != sumaFila) {
+                isFila = false;
+                break;
+            }
+        }
+
+        boolean isColumna = true;
+        int sumaColumna = 0;
+        for (int j = 0; j < matriz[0].length; j++) {
+            for (int i = 0; i < matriz.length; i++) {
+                sumaColumna += matriz[i][j];
+            }
+            if (sumaColumna != sumaFila) {
+                isColumna = false;
+                break;
+            }
+        }
+
+        boolean isDiagonalPrincipal = true;
+        int sumaDiagonalPrincipal = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaDiagonalPrincipal += matriz[i][i];
+        }
+        if (sumaDiagonalPrincipal != sumaFila) {
+            isDiagonalPrincipal = false;
+        }
+
+        boolean isDiagonalSecundaria = true;
+        int sumaDiagonalSecundaria = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaDiagonalSecundaria += matriz[i][matriz.length - 1 - i];
+        }
+        if (sumaDiagonalSecundaria != sumaFila) {
+            isDiagonalSecundaria = false;
+        }
+
+        esCuadradoMagico = isFila && isColumna && isDiagonalPrincipal && isDiagonalSecundaria;
+
+        for (int fila[] : matriz) {
+            System.out.println(Arrays.toString(fila));
+        }
+
+        System.out.println(sumaFila);
+        System.out.println(sumaColumna);
+        System.out.println(sumaDiagonalPrincipal);
+        System.out.println(sumaDiagonalSecundaria);
+
+        if (esCuadradoMagico) {
+            System.out.println("Cuadrado Mágico");
+        } else {
+            System.out.println("No es un Cuadrado Mágico");
+        }*/
 
     }
 }
