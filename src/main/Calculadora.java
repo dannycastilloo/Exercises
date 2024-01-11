@@ -2,24 +2,28 @@ package main;
 
 public class Calculadora {
 
-    // Enteros
-    public int sumar(int valor1, int valor2) {
-        return valor1 + valor2;
+    public int sumar(int... numeros) { // n -> int Arreglo
+        int suma = 0;
+        for (int numero : numeros) {
+            suma += numero;
+        }
+        return suma;
     }
 
-    // Flotantes
-    public float sumar(float valor1, float valor2) {
-        return valor1 + valor2;
+    public float sumar(float... numeros) { // n -> int Arreglo
+        float suma = 0.0f;
+        for (float numero : numeros) {
+            suma += numero;
+        }
+        return suma;
     }
 
-    // Doubles
-    public double sumar(double valor1, double valor2) {
-        return valor1 + valor2;
-    }
-
-    // Tres argumentos
-    public int sumar(int valor1, int valor2, int valor3) {
-        return valor1 + valor2 + valor3;
+    public double sumar(double... numeros) { // n -> int Arreglo
+        double suma = 0.0;
+        for (double numero : numeros) {
+            suma += numero;
+        }
+        return suma;
     }
 
 }

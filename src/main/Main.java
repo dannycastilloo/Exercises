@@ -605,5 +605,33 @@ public class Main {
         System.out.println("El resultado de la suma 2 es: " + suma2);
         System.out.println("El resultado de la suma 3 es: " + suma3);
         System.out.println("El resultado de la suma 4 es: " + suma4);*/
+
+        /*Usuario usuario1 = new Usuario();
+        Usuario usuario2 = new Usuario("Usuario2");
+        Usuario usuario3 = new Usuario("Usuario3", "Password");
+
+        usuario1.saludar();
+        usuario2.saludar();
+        usuario3.saludar();*/
+
+        /*Calculadora calculadora = new Calculadora();
+
+        int resultadoInt = calculadora.sumar(10,4);
+        float resultadoFloat = calculadora.sumar(10.4f,4.8f);
+        double resultadoDouble = calculadora.sumar(10.5,4.2);
+        System.out.println("Resultado 1: " + resultadoInt);
+        System.out.println("Resultado 2: " + resultadoFloat);
+        System.out.println("Resultado 3: " + resultadoDouble);*/
+
+        // System.out.println(Circulo.area(123f));
+
+        /*Usuario usuario = new Usuario("Codi");
+        usuario.establecerRol();*/
+
+        Gato gato = new Gato();
+        Perro perro = new Perro("perro", "raza", 4);
+
+        perro.dormir();
+        gato.dormir();
     }
 }
