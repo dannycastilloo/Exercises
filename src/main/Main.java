@@ -559,5 +559,51 @@ public class Main {
             System.out.println("No es un Cuadrado Mágico");
         }*/
 
+        /*Perro valentino = new Perro();
+
+        valentino.nombre = "Valentino";
+        valentino.raza = "Cocker";
+        valentino.edad = 10;
+
+        System.out.println("El nombre es: " + valentino.nombre);
+        System.out.println("La raza es: " + valentino.raza);
+        System.out.println("La edad es: " + valentino.edad);
+
+        valentino.comer();
+        valentino.ladrar();
+        valentino.dormir();
+
+        System.out.println();
+
+        Perro huesito = new Perro();
+        huesito.establecerAtributos("Huesito", 9, "Mestizo");
+        System.out.println("El nombre es: " + huesito.nombre);
+        System.out.println("La raza es: " + huesito.raza);
+        System.out.println("La edad es: " + huesito.edad);*/
+
+        /*Triangulo triangulo = new Triangulo();
+        triangulo.base = 5;
+        triangulo.altura = 8;
+        float resultado = triangulo.area();
+        System.out.println("El área del triángulo es: " + resultado);*/
+
+        /*Usuario codi = new Usuario();
+        codi.username = "Codi";
+        codi.setPassword("Pass");
+
+        System.out.println(codi.username);
+        System.out.println(codi.getPassword());
+
+        codi.saludar();*/
+
+        /*Calculadora calculadora = new Calculadora();
+        int suma1 = calculadora.sumar(4,6);
+        float suma2 = calculadora.sumar(4.4f, 6.8f);
+        double suma3 = calculadora.sumar(4,6);
+        double suma4 = calculadora.sumar(4,6,8);
+        System.out.println("El resultado de la suma 1 es: " + suma1);
+        System.out.println("El resultado de la suma 2 es: " + suma2);
+        System.out.println("El resultado de la suma 3 es: " + suma3);
+        System.out.println("El resultado de la suma 4 es: " + suma4);*/
     }
 }
